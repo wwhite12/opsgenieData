@@ -41,7 +41,7 @@ while re.search(myregex,start_date):
         endpoint = requests.get(get_endpoint,headers=headers)
         result_from_endpoint = requests.get(endpoint.text)
         #print(result_from_endpoint.text)#THIS IS IT
-        file_path = '/Applications/Splunk/etc/apps/opsgenie_inputs/output/'
+        file_path = '/insert/path/to/output/folder/'
         output_file = file_path+filename
         x = open(output_file,"w")
         x.write(result_from_endpoint.text)
